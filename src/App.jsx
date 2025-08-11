@@ -3,7 +3,6 @@ import { Button } from '@/components/ui/button.jsx';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card.jsx';
 import { Toaster } from "@/components/ui/sonner";
 import { useToast } from "@/hooks/use-toast";
-import { FaWhatsapp } from "react-icons/fa";
 import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
 import {
@@ -15,22 +14,22 @@ import {
   Loader2,
   Mail,
   Menu,
-  MessageCircle,
   Moon,
   Phone,
   Play,
   Smartphone,
   Sun,
-  X,
+  X
 } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { FaWhatsapp } from "react-icons/fa";
 import './App.css';
 
 // Import all project images
-import a3tnImage from './assets/a3tn-screenshot-1.webp';
+import a3tnImage from './assets/a3tn.svg';
 import alKitabImage from './assets/al-kitab-screenshot-1.webp';
-import fanyPlusImage from './assets/fany-plus-screenshot-1.webp';
 import lendHandsExpertImage from './assets/expert.svg';
+import fanyPlusImage from './assets/fany-plus-screenshot-1.webp';
 import lendHandsImage from './assets/lendhands.svg';
 import maghsoolImage from './assets/maghsool-screenshot-1.webp';
 import masakibImage from './assets/masakib-screenshot-1.webp';
@@ -656,7 +655,7 @@ function App() {
                 {[
                   { icon: Mail, text: "mohammed.ezzatt00@gmail.com", href: "mailto:mohammed.ezzatt00@gmail.com" },
                   { icon: Phone, text: "+201026692536", href: "tel:+201026692536" },
-                  { icon: FaWhatsapp, text: "WhatsApp", href: waLink }, 
+                  { icon: FaWhatsapp, text: "WhatsApp", href: waLink },
                   { icon: Linkedin, text: "LinkedIn", href: "https://www.linkedin.com/in/mohamed-e-6a99a0224/" }
                 ].map((contact) => (
                   <motion.div key={contact.text} className="flex items-center space-x-4" variants={fadeInUp} whileHover={{ scale: 1.05, x: 10 }}>
