@@ -32,7 +32,8 @@ import lendHandsExpertImage from './assets/expert.svg';
 import fanyPlusImage from './assets/fany-plus-screenshot-1.webp';
 import lendHandsImage from './assets/lendhands.svg';
 import maghsoolImage from './assets/maghsool-screenshot-1.webp';
-import masakibImage from './assets/masakib-screenshot-1.webp';
+import masakibImage from './assets/masakib.svg';
+import masakibCaptaionImage from './assets/masakib_cap.svg';
 import sajilImage from './assets/sajil-screenshot-1.webp';
 import wathbahImage from './assets/wathbah-screenshot-1.webp';
 
@@ -115,7 +116,7 @@ function App() {
       status: "Published",
       googlePlay: "https://play.google.com/store/apps/details?id=com.digitalart.masakeb_captain",
       appStore: "https://apps.apple.com/eg/app/masakib-captain-%D9%85%D8%B3%D8%A7%D9%83%D8%A8-%D9%83%D8%A7%D8%A8%D8%AA%D9%86/id6478289846?l=ar",
-      image: masakibImage
+      image: masakibCaptaionImage
     },
     {
       title: "A3tn – Heavy Equipment Rental & Logistics App",
