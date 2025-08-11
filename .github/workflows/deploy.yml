@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]   # غيّرها لو فرعك اسمه master
+    branches: [ main ]   # غيّرها لو الفرع بتاعك مش main
   workflow_dispatch:
 
 permissions:
@@ -20,22 +20,21 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # 1) ثبّت Node أولاً
+      # 1) تثبيت Node
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: "pnpm"
 
-      # 2) فعّل PNPM وثبّت الاعتمادات
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 9
-          run_install: true
+      # 2) تفعيل Corepack عشان يشتغل pnpm
+      - run: corepack enable
 
-      # 3) ابنِ المشروع
+      # 3) تثبيت الاعتمادات
+      - run: pnpm install --frozen-lockfile
+
+      # 4) بناء المشروع
       - run: pnpm build
 
-      # 4) ارفع ملفات dist كأرتيفكت للنشر
+      # 5) رفع ملفات build
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
