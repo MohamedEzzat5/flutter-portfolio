@@ -1,22 +1,45 @@
 name: Deploy to GitHub Pages
+
 on:
   push:
-    branches: [ main ]
+    branches: [ main ]   # غيّرها لو فرعك اسمه master
+  workflow_dispatch:
+
 permissions:
   contents: read
   pages: write
   id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      # 1) ثبّت Node أولاً
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "pnpm"
+
+      # 2) فعّل PNPM وثبّت الاعتمادات
       - uses: pnpm/action-setup@v4
-        with: { version: 9 }
-      - run: pnpm install
+        with:
+          version: 9
+          run_install: true
+
+      # 3) ابنِ المشروع
       - run: pnpm build
+
+      # 4) ارفع ملفات dist كأرتيفكت للنشر
       - uses: actions/upload-pages-artifact@v3
-        with: { path: './dist' }
+        with:
+          path: ./dist
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
