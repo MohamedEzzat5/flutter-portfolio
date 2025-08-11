@@ -30,8 +30,8 @@ import './App.css';
 import a3tnImage from './assets/a3tn-screenshot-1.webp';
 import alKitabImage from './assets/al-kitab-screenshot-1.webp';
 import fanyPlusImage from './assets/fany-plus-screenshot-1.webp';
-import lendHandsExpertImage from './assets/lend-hands-expert-screenshot-1.webp';
-import lendHandsImage from './assets/lend-hands-screenshot-1.webp';
+import lendHandsExpertImage from './assets/expert.svg';
+import lendHandsImage from './assets/lendhands.svg';
 import maghsoolImage from './assets/maghsool-screenshot-1.webp';
 import masakibImage from './assets/masakib-screenshot-1.webp';
 import sajilImage from './assets/sajil-screenshot-1.webp';
@@ -77,11 +77,10 @@ function App() {
     'Clean Architecture', 'Localization', 'Git', 'Problem Solving',
     'Leadership', 'Communication', 'Teamwork', 'Research'
   ]
-
   const projects = [
     {
       title: "Lend Hands: Home Services App",
-      description: "A mobile app for booking home services (cleaning, organizing, maintenance) with real-time expert tracking. Built with REST APIs for service management and Firebase for push notifications. Used Cubit for state management and responsive custom UI.",
+      description: "Mobile app for booking home services with real-time expert tracking, REST APIs, and push notifications using Cubit and a responsive custom UI.",
       technologies: ["Flutter", "REST APIs", "Firebase", "Cubit", "Custom UI"],
       features: ["Service management", "Push notifications", "Real-time tracking"],
       status: "Published",
@@ -91,7 +90,7 @@ function App() {
     },
     {
       title: "Lend Hands Expert: Provider App",
-      description: "A service provider app for receiving and managing services requests. Integrated with REST APIs for booking flow and status updates. Utilized Bloc architecture and Firebase for notifications.",
+      description: "Service provider app to receive and manage service requests with REST APIs, Bloc architecture, and Firebase notifications.",
       technologies: ["Flutter", "REST APIs", "Bloc architecture", "Firebase"],
       features: ["Booking flow", "Status updates", "Notifications"],
       status: "Published",
@@ -101,7 +100,7 @@ function App() {
     },
     {
       title: "Masakeb – Charity Donation App",
-      description: "Masakeb is a charity donation app designed to support mosques in Saudi Arabia. Users can donate water, water coolers, or dates, choose mosques from the map or search by name, set the donation quantity, and complete payment easily.",
+      description: "Charity app for donating water, coolers, or dates to mosques in Saudi Arabia with map search, quantity selection, and online payment.",
       technologies: ["Flutter", "Google Maps", "Real-time tracking"],
       features: ["Mosque selection from map or search", "Donate water, coolers, or dates", "Set quantities & pay online", "View order status after payment"],
       status: "Published",
@@ -111,7 +110,7 @@ function App() {
     },
     {
       title: "Masakeb Captain – Charity Delivery App",
-      description: "Masakeb Captain is the delivery app for drivers handling charity orders. It allows them to receive delivery requests after donors complete payment, with Google Maps integration to locate mosques and find the fastest routes.",
+      description: "Delivery app for handling charity orders with Google Maps navigation, mosque location, and delivery status updates.",
       technologies: ["Flutter", "Google Maps", "Real-time tracking"],
       features: ["Receive delivery requests after payment", "View order details & mosque location", "Google Maps navigation", "Update delivery status for donors"],
       status: "Published",
@@ -121,7 +120,7 @@ function App() {
     },
     {
       title: "A3tn – Heavy Equipment Rental & Logistics App",
-      description: "Developed an app for renting heavy equipment with user roles (customer, provider, driver), live pricing, secure payments, and workflow monitoring.",
+      description: "App for renting heavy equipment with multiple user roles, live pricing, secure payments, and workflow monitoring.",
       technologies: ["Flutter", "Live pricing", "Secure payments", "Workflow monitoring"],
       features: ["Customer/provider/driver roles", "Equipment rental"],
       status: "Published",
@@ -131,7 +130,7 @@ function App() {
     },
     {
       title: "Fany Plus – Home Services App",
-      description: "Built a booking app for home services with provider/customer modes, task management, and real-time dashboards.",
+      description: "Home services booking app with provider/customer modes, task management, and real-time dashboards.",
       technologies: ["Flutter", "Task management", "Real-time dashboards"],
       features: ["Provider/customer modes", "Service booking"],
       status: "Published",
@@ -141,7 +140,7 @@ function App() {
     },
     {
       title: "Al-Kitab: Holy Quran Application",
-      description: "Developed an offline Quran app with 3 recitation styles, 174 audio reciters, prayer times, Ramadan schedule, 59 tafsir sources, Hadith, and Quran radio.",
+      description: "Offline Quran app with 3 recitation styles, 174 reciters, prayer times, Ramadan schedule, tafsir, Hadith, and Quran radio.",
       technologies: ["Flutter", "Offline storage", "Audio streaming"],
       features: ["3 recitation styles", "174 audio reciters", "Prayer times", "Ramadan schedule", "59 tafsir sources", "Hadith", "Quran radio"],
       status: "Published",
@@ -151,7 +150,7 @@ function App() {
     },
     {
       title: "Wathba: Property Management App",
-      description: "Developed a SaaS solution for residential property and community management that simplifies the home renting process by allowing owners, property managers and tenants to interact in a tech-based, user-friendly environment.",
+      description: "SaaS platform for property and community management, enabling leasing, service requests, and tenant interaction.",
       technologies: ["Flutter", "Property management", "SaaS solution"],
       features: ["Lease management", "Service requests", "Tenant portal"],
       status: "Published",
@@ -161,7 +160,7 @@ function App() {
     },
     {
       title: "Sajil: Car Rental Application",
-      description: "Built a car rental app with payments, real-time availability, and optimized state management.",
+      description: "Car rental app with payments, real-time availability, and optimized state management for booking.",
       technologies: ["Flutter", "Payment integration", "Real-time availability"],
       features: ["Optimized state management", "Rental booking"],
       status: "Published",
@@ -171,7 +170,7 @@ function App() {
     },
     {
       title: "Maghsool: Laundry & Ironing Services App",
-      description: "Created a laundry services app with customer, driver, and provider workflows, incorporating route tracking via Google Maps API.",
+      description: "Laundry services app with customer, driver, and provider workflows plus Google Maps route tracking.",
       technologies: ["Flutter", "Google Maps API", "Route tracking"],
       features: ["Customer/driver/provider workflows", "Location tracking"],
       status: "Published",
@@ -181,7 +180,7 @@ function App() {
     },
     {
       title: "Wajed: Multi-Vendor Marketplace",
-      description: "A comprehensive multi-vendor application ecosystem including admin app, driver app, customer app, and vendor app. Features complete marketplace functionality with order management, delivery tracking, and vendor management.",
+      description: "Multi-vendor ecosystem with admin, driver, customer, and vendor apps for complete marketplace operations.",
       technologies: ["Flutter", "Multi-vendor architecture", "Order management", "Delivery tracking"],
       features: ["Admin dashboard", "Vendor management", "Customer ordering", "Driver delivery", "Real-time tracking"],
       status: "In Development",
@@ -191,7 +190,7 @@ function App() {
     },
     {
       title: "TSH E-Commerce App",
-      description: "A complete e-commerce application with full shopping cycle including categories, product browsing, favorites, cart management, payment processing, order tracking, and status updates.",
+      description: "E-commerce app with categories, browsing, cart, payments, order tracking, and complete shopping cycle.",
       technologies: ["Flutter", "E-commerce", "Payment integration", "Order tracking"],
       features: ["Product categories", "Add to favorites", "Cart management", "Payment processing", "Order status tracking", "Complete shopping cycle"],
       status: "In Development",
