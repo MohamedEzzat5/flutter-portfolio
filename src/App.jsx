@@ -374,8 +374,8 @@ function App() {
       </motion.nav>
 
       {/* Hero Section */}
-      <section id="home" className="pt-16 min-h-screen flex items-center justify-center hero-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section id="home" className="pt-0 min-h-screen flex items-center justify-center hero-background">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div className="space-y-8" initial="initial" animate="animate" variants={staggerContainer}>
             <motion.div className="space-y-4" variants={fadeInUp}>
               <motion.h1
@@ -387,7 +387,7 @@ function App() {
                 Mohamed Ezzat
               </motion.h1>
               <motion.h4
-                className="text-4xl md:text-2xl font-bold tracking-tight"
+                className="text-4xl md:text-2xl font-semi-bold tracking"
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -398,7 +398,7 @@ function App() {
                 Experienced Flutter Developer skilled in building high-performance cross-platform apps using Dart, Clean Architecture, and Bloc/Cubit. Proficient with Firebase services, RESTful APIs, and responsive UI/UX. Strong focus on scalable architecture, clean code, and seamless user experience.
               </motion.p>
             </motion.div>
-
+            
             <motion.div className="flex flex-col sm:flex-row gap-4 justify-center" variants={fadeInUp}>
               <motion.div {...scaleOnHover}>
                 <Button size="lg" onClick={() => scrollToSection('projects')} className="text-lg px-8 py-3 btn-hover">
