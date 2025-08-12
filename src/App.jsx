@@ -386,6 +386,14 @@ function App() {
               >
                 Mohamed Ezzat
               </motion.h1>
+              <motion.h4
+                className="text-4xl md:text-2xl font-bold tracking-tight"
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
+                Flutter Developer @ <span className="text-primary">TSH Soft</span>
+              </motion.h4>
               <motion.p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto" variants={fadeInUp}>
                 Experienced Flutter Developer skilled in building high-performance cross-platform apps using Dart, Clean Architecture, and Bloc/Cubit. Proficient with Firebase services, RESTful APIs, and responsive UI/UX. Strong focus on scalable architecture, clean code, and seamless user experience.
               </motion.p>
