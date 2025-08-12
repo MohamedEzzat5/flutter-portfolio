@@ -36,6 +36,7 @@ import masakibImage from './assets/masakib.svg';
 import masakibCaptaionImage from './assets/masakib_cap.svg';
 import sajilImage from './assets/sajil.png';
 import wathbahImage from './assets/wathba.svg';
+import royaaImage from './assets/royaa.svg';
 
 function App() {
   const [darkMode, setDarkMode] = useState(true)
@@ -127,6 +128,16 @@ function App() {
       googlePlay: "https://play.google.com/store/apps/details?id=com.sharaftech.e3tn",
       appStore: "https://apps.apple.com/us/app/a3tn-%D8%A5%D8%B9%D8%AA%D9%86/id6740632715",
       image: a3tnImage
+    },
+    {
+      title: "Royat Wattan – Discount Coupons App",
+      description: "App for discount coupons with provider/customer modes, package management, and featured discounts.",
+      technologies: ["Flutter", "Package management", "Featured discounts"],
+      features: ["Package management", "Discount coupons"],
+      status: "Published",
+      googlePlay: "https://play.google.com/store/apps/details?id=com.tsh.roya.roya",
+      appStore: "https://play.google.com/store/apps/details?id=com.tsh.roya.roya",
+      image: royaaImage
     },
     {
       title: "Fany Plus – Home Services App",
