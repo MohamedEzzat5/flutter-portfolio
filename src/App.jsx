@@ -27,15 +27,15 @@ import './App.css';
 
 // Import all project images
 import a3tnImage from './assets/a3tn.svg';
-import alKitabImage from './assets/al-kitab-screenshot-1.webp';
+import alKitabImage from './assets/ketab.svg';
 import lendHandsExpertImage from './assets/expert.svg';
-import fanyPlusImage from './assets/fany-plus-screenshot-1.webp';
+import fanyPlusImage from './assets/fany.svg';
 import lendHandsImage from './assets/lendhands.svg';
-import maghsoolImage from './assets/maghsool-screenshot-1.webp';
+import maghsoolImage from './assets/maghsol.svg';
 import masakibImage from './assets/masakib.svg';
 import masakibCaptaionImage from './assets/masakib_cap.svg';
-import sajilImage from './assets/sajil-screenshot-1.webp';
-import wathbahImage from './assets/wathbah-screenshot-1.webp';
+import sajilImage from './assets/sajil.png';
+import wathbahImage from './assets/wathba.svg';
 
 function App() {
   const [darkMode, setDarkMode] = useState(true)
